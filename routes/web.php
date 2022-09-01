@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','StaticPagesController@home');//第一个参数明确url，第二个参数明确URL的控制器动作
+Route::get('/help','StaticPagesController@help');
+Route::get('/about','StaticPagesController@about');
