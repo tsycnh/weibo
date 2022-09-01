@@ -17,7 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    protected $fillable = [//仅这里提到的属性可以被更新
         'name',
         'email',
         'password',
@@ -38,7 +38,7 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $casts = [
+    protected $casts = [// 指定数据库字段的数据类型
         'email_verified_at' => 'datetime',
     ];
 }
